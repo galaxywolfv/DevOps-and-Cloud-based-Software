@@ -2,7 +2,7 @@ version: '3'  # Specifies the Docker Compose file format version
 
 services:
   student_service:  # Defines the student_service container
-    image: nginx  # Uses the official Nginx image
+    build: .
     restart: unless-stopped  # Ensures the container restarts unless manually stopped
     depends_on:
       - mongo  # Ensures that the mongo service starts before student_service
